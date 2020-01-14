@@ -10,7 +10,7 @@ import Foundation
 //import Alamofire
 import Combine
 
-class NetworkManager: ObservableObject {
+class Network: ObservableObject {
     @Published var movies = MovieList(results: [])
     @Published var showingNetworkError = false
     @Published var confirmationMessage = ""
