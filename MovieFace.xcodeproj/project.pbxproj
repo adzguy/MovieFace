@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,12 @@
 		255059AE23CD920A0027B9E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 255059AD23CD920A0027B9E6 /* Assets.xcassets */; };
 		255059B123CD920A0027B9E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 255059B023CD920A0027B9E6 /* Preview Assets.xcassets */; };
 		255059B423CD920A0027B9E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 255059B223CD920A0027B9E6 /* LaunchScreen.storyboard */; };
+		255059BC23CD92470027B9E6 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255059BB23CD92470027B9E6 /* Movie.swift */; };
+		255059C023CE1C5C0027B9E6 /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255059BF23CE1C5C0027B9E6 /* MovieList.swift */; };
+		255059C223CE1D210027B9E6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255059C123CE1D210027B9E6 /* NetworkManager.swift */; };
+		255059C623CE249F0027B9E6 /* MovieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255059C523CE249F0027B9E6 /* MovieRow.swift */; };
+		255059C923CE262B0027B9E6 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 255059C823CE262B0027B9E6 /* URLImage */; };
+		255059CB23CE358E0027B9E6 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255059CA23CE358E0027B9E6 /* MovieDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,11 @@
 		255059B023CD920A0027B9E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		255059B323CD920A0027B9E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		255059B523CD920A0027B9E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		255059BB23CD92470027B9E6 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		255059BF23CE1C5C0027B9E6 /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
+		255059C123CE1D210027B9E6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		255059C523CE249F0027B9E6 /* MovieRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRow.swift; sourceTree = "<group>"; };
+		255059CA23CE358E0027B9E6 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				255059C923CE262B0027B9E6 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +72,9 @@
 			children = (
 				255059A423CD92090027B9E6 /* AppDelegate.swift */,
 				255059A623CD92090027B9E6 /* SceneDelegate.swift */,
-				255059AB23CD92090027B9E6 /* ContentView.swift */,
+				255059C423CE23A40027B9E6 /* View */,
+				255059C323CE23870027B9E6 /* Model */,
+				255059C123CE1D210027B9E6 /* NetworkManager.swift */,
 				255059AD23CD920A0027B9E6 /* Assets.xcassets */,
 				255059B223CD920A0027B9E6 /* LaunchScreen.storyboard */,
 				255059B523CD920A0027B9E6 /* Info.plist */,
@@ -76,6 +90,25 @@
 				255059B023CD920A0027B9E6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		255059C323CE23870027B9E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				255059BB23CD92470027B9E6 /* Movie.swift */,
+				255059BF23CE1C5C0027B9E6 /* MovieList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		255059C423CE23A40027B9E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				255059AB23CD92090027B9E6 /* ContentView.swift */,
+				255059CA23CE358E0027B9E6 /* MovieDetailView.swift */,
+				255059C523CE249F0027B9E6 /* MovieRow.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,6 +127,9 @@
 			dependencies = (
 			);
 			name = MovieFace;
+			packageProductDependencies = (
+				255059C823CE262B0027B9E6 /* URLImage */,
+			);
 			productName = MovieFace;
 			productReference = 255059A123CD92090027B9E6 /* MovieFace.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +158,9 @@
 				Base,
 			);
 			mainGroup = 2550599823CD92090027B9E6;
+			packageReferences = (
+				255059C723CE262B0027B9E6 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 255059A223CD92090027B9E6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -149,10 +188,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				255059C023CE1C5C0027B9E6 /* MovieList.swift in Sources */,
+				255059C623CE249F0027B9E6 /* MovieRow.swift in Sources */,
 				255059AA23CD92090027B9E6 /* MovieFace.xcdatamodeld in Sources */,
+				255059CB23CE358E0027B9E6 /* MovieDetailView.swift in Sources */,
 				255059A523CD92090027B9E6 /* AppDelegate.swift in Sources */,
+				255059C223CE1D210027B9E6 /* NetworkManager.swift in Sources */,
 				255059AC23CD92090027B9E6 /* ContentView.swift in Sources */,
 				255059A723CD92090027B9E6 /* SceneDelegate.swift in Sources */,
+				255059BC23CD92470027B9E6 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +390,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		255059C723CE262B0027B9E6 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		255059C823CE262B0027B9E6 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 255059C723CE262B0027B9E6 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		255059A823CD92090027B9E6 /* MovieFace.xcdatamodeld */ = {
