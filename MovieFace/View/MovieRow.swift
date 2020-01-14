@@ -27,8 +27,10 @@ struct MovieRow : View {
                         .lineLimit(nil)
                     Spacer()
                 }
+                .padding(.bottom)
                 HStack {
-                    Text(movie.releaseDate).foregroundColor(.gray)
+                    Text(movie.releaseDate)
+                        .foregroundColor(.gray)
                     Spacer()
                     Text("Rate: \(movie.voteAverage.format())")
                 }

@@ -23,11 +23,21 @@ struct MovieDetailView: View {
             .frame(width: UIScreen.main.bounds.height/8*3, height: UIScreen.main.bounds.height/2)
             
             HStack {
-                Text("Description").foregroundColor(.gray)
+                Text("Description:")
+                    .foregroundColor(.gray)
                 Spacer()
             }
             Text(self.movie.overview).lineLimit(nil)
+                .padding(.bottom)
+            
+            HStack{
+                Text("Popularity:")
+                    .foregroundColor(.gray)
+                Text(String(self.movie.popularity)).lineLimit(nil)
+                Spacer()
+            }
             Spacer()
+           
         }
         .padding()
         .navigationBarTitle(Text(movie.title), displayMode: .inline)
