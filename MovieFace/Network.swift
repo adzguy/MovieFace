@@ -15,7 +15,7 @@ class Network: ObservableObject {
     @Published var showingNetworkError = false
     @Published var confirmationMessage = ""
     
-    private let apiKey = "32cbd53f4bc581422d7d1056a83db2ec"
+    private let apiKey = "" // register an account to get api key at https://www.themoviedb.org
     private let apiUrlBase = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key="
     
     init() {
